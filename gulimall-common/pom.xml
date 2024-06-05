@@ -203,20 +203,12 @@
             <artifactId>joda-time</artifactId>
             <version>${joda.time.version}</version> <!-- 使用你需要的版本 -->
         </dependency>
+<!--        <dependency>-->
+<!--        <groupId>com.alibaba.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-dependencies</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
-    <!-- 在 <dependencyManagement> 中添加 Spring Cloud 依赖 -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2021.0.5</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 <!--    <build>-->
 <!--        <plugins>-->
 <!--            <plugin>-->
@@ -233,5 +225,16 @@
 <!--            </plugin>-->
 <!--        </plugins>-->
 <!--    </build>-->
-
+    <!-- 在 <dependencyManagement> 中添加 Spring Cloud 依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
